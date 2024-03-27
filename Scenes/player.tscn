@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjhgj0pcssx4v"]
+[gd_scene load_steps=4 format=3 uid="uid://cjhgj0pcssx4v"]
 
+[ext_resource type="Script" path="res://Classes/player.cs" id="1_omf6o"]
 [ext_resource type="Texture2D" uid="uid://8eq2ns80rgpj" path="res://Assets/paddle.png" id="1_pgvor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5acsl"]
 size = Vector2(256, 32)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_omf6o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708

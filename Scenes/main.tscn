@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://wio44qthqv5t"]
+[gd_scene load_steps=3 format=3 uid="uid://wio44qthqv5t"]
 
 [ext_resource type="PackedScene" uid="uid://bhnncvaslon07" path="res://Scenes/wall.tscn" id="1_6jco7"]
+[ext_resource type="PackedScene" uid="uid://cjhgj0pcssx4v" path="res://Scenes/player.tscn" id="2_p14di"]
 
 [node name="Main" type="Node2D"]
 
@@ -9,15 +10,18 @@
 [node name="Top Wall" parent="Walls" instance=ExtResource("1_6jco7")]
 position = Vector2(0, -600)
 rotation = 1.5708
-scale = Vector2(1, 9)
+scale = Vector2(1, 5)
 
 [node name="Left Wall" parent="Walls" instance=ExtResource("1_6jco7")]
-position = Vector2(-600, 24)
+position = Vector2(-650, 24)
 scale = Vector2(1, 5)
 
 [node name="Right Wall" parent="Walls" instance=ExtResource("1_6jco7")]
-position = Vector2(600, 24)
+position = Vector2(650, 24)
 scale = Vector2(1, 5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
+
+[node name="Player" parent="." instance=ExtResource("2_p14di")]
+position = Vector2(0, 544)
