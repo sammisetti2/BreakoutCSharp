@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://wio44qthqv5t"]
+[gd_scene load_steps=5 format=3 uid="uid://wio44qthqv5t"]
 
 [ext_resource type="PackedScene" uid="uid://bhnncvaslon07" path="res://Scenes/wall.tscn" id="1_6jco7"]
 [ext_resource type="PackedScene" uid="uid://d1w03mbvxy8yq" path="res://Scenes/ball.tscn" id="2_chu28"]
 [ext_resource type="PackedScene" uid="uid://cjhgj0pcssx4v" path="res://Scenes/player.tscn" id="2_p14di"]
+[ext_resource type="PackedScene" uid="uid://dw4oqkhxj7ey0" path="res://Scenes/blue_brick.tscn" id="4_owg57"]
 
 [node name="Main" type="Node2D"]
 
@@ -27,5 +28,8 @@ zoom = Vector2(0.5, 0.5)
 [node name="Player" parent="." instance=ExtResource("2_p14di")]
 position = Vector2(0, 544)
 
-[node name="Ball" parent="Player" instance=ExtResource("2_chu28")]
-position = Vector2(0, -40)
+[node name="Ball" parent="." instance=ExtResource("2_chu28")]
+position = Vector2(0, 504)
+
+[node name="Blue Brick" parent="." instance=ExtResource("4_owg57")]
+position = Vector2(-40, -328)
