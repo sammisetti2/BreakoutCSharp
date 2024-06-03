@@ -40,6 +40,14 @@ public partial class ball : CharacterBody2D
         }
 
         var collision = MoveAndCollide(Velocity * (float)(ballSpeed * delta));
+
+        var collider = collision.GetCollider();
+
+        if (collider is Brick)
+        {
+            Collided((Brick)collider);
+        }
+
         if (collision != null)
         {
             GD.Print(speedMultiplier);
@@ -57,6 +65,11 @@ public partial class ball : CharacterBody2D
 
         Velocity = new Vector2(rand1, -1 * initialBallSpeed);
         GD.Print(Velocity);
+    }
+
+    public void Collided(Brick brick)
+    {
+        brick.TakeAHit();
     }
 
 }
