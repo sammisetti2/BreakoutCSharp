@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://wio44qthqv5t"]
+[gd_scene load_steps=8 format=3 uid="uid://wio44qthqv5t"]
 
 [ext_resource type="PackedScene" uid="uid://bhnncvaslon07" path="res://Scenes/wall.tscn" id="1_6jco7"]
 [ext_resource type="PackedScene" uid="uid://d1w03mbvxy8yq" path="res://Scenes/ball.tscn" id="2_chu28"]
 [ext_resource type="PackedScene" uid="uid://cjhgj0pcssx4v" path="res://Scenes/player.tscn" id="2_p14di"]
 [ext_resource type="PackedScene" uid="uid://dw4oqkhxj7ey0" path="res://Scenes/blue_brick.tscn" id="4_owg57"]
+[ext_resource type="PackedScene" uid="uid://dmeef586pbfbo" path="res://Scenes/green_brick.tscn" id="5_thkdv"]
+[ext_resource type="PackedScene" uid="uid://y67h6lj8fkko" path="res://Scenes/orange_brick.tscn" id="6_x2usv"]
+[ext_resource type="PackedScene" uid="uid://c1goohbrwurpa" path="res://Scenes/red_brick.tscn" id="7_wm4pa"]
 
 [node name="Main" type="Node2D"]
 
@@ -12,10 +15,10 @@
 [node name="Top Wall" parent="Walls" instance=ExtResource("1_6jco7")]
 position = Vector2(0, -600)
 rotation = 1.5708
-scale = Vector2(1, 5)
+scale = Vector2(1, 5.1)
 
 [node name="Left Wall" parent="Walls" instance=ExtResource("1_6jco7")]
-position = Vector2(-650, 24)
+position = Vector2(-664, 24)
 scale = Vector2(1, 5)
 
 [node name="Right Wall" parent="Walls" instance=ExtResource("1_6jco7")]
@@ -31,5 +34,244 @@ position = Vector2(0, 544)
 [node name="Ball" parent="." instance=ExtResource("2_chu28")]
 position = Vector2(0, 504)
 
-[node name="Blue Brick" parent="." instance=ExtResource("4_owg57")]
-position = Vector2(-40, -328)
+[node name="Bricks" type="Node" parent="."]
+
+[node name="Blue Brick" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(72, -120)
+
+[node name="Blue Brick2" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-88, -120)
+
+[node name="Blue Brick3" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-248, -120)
+
+[node name="Blue Brick4" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-408, -120)
+
+[node name="Blue Brick8" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-568, -120)
+
+[node name="Blue Brick5" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(232, -120)
+
+[node name="Blue Brick6" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(392, -120)
+
+[node name="Blue Brick7" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(552, -120)
+
+[node name="Blue Brick9" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(72, -64)
+
+[node name="Blue Brick10" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-88, -64)
+
+[node name="Blue Brick11" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-248, -64)
+
+[node name="Blue Brick12" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-408, -64)
+
+[node name="Blue Brick13" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(-568, -64)
+
+[node name="Blue Brick14" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(232, -64)
+
+[node name="Blue Brick15" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(392, -64)
+
+[node name="Blue Brick16" parent="Bricks" instance=ExtResource("4_owg57")]
+position = Vector2(552, -64)
+
+[node name="Green Brick" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(72, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick2" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(232, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick3" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(392, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick4" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(552, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick5" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-87.9999, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick6" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-248, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick7" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-408, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick8" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-568, -256)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick9" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(72, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick10" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(232, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick11" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(392, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick12" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(552, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick13" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-87.9999, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick14" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-248, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick15" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-408, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Green Brick16" parent="Bricks" instance=ExtResource("5_thkdv")]
+position = Vector2(-568, -200)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(72, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick2" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(232, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick3" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(392, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick4" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(552, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick5" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-568, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick6" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-408, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick7" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-248, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick8" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-88, -328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick9" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(72, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick10" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(232, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick11" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(392, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick12" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(552, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick13" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-568, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick14" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-408, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick15" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-248, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Orange Brick16" parent="Bricks" instance=ExtResource("6_x2usv")]
+position = Vector2(-88, -384)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(72, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick2" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(232, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick3" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(392, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick4" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(552, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick5" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-568, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick6" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-408, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick7" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-248, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick8" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-87.9999, -448)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick9" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(71.9999, -504)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick10" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(232, -504)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick11" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(392, -504)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick12" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(552, -504)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick13" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-568, -504)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick14" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-408, -504)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick15" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-248, -504)
+scale = Vector2(0.4, 0.4)
+
+[node name="Red Brick16" parent="Bricks" instance=ExtResource("7_wm4pa")]
+position = Vector2(-88, -504)
+scale = Vector2(0.4, 0.4)

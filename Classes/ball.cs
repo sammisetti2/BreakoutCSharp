@@ -3,6 +3,9 @@ using System;
 
 public partial class ball : CharacterBody2D
 {
+    [Signal]
+    public delegate void CollidedWithBrickEventHandler(Brick brick);
+
     private bool followPlayer;
 
     [Export]
@@ -40,11 +43,17 @@ public partial class ball : CharacterBody2D
         }
 
         var collision = MoveAndCollide(Velocity * (float)(ballSpeed * delta));
+        GodotObject? collider = null;
 
-        var collider = collision.GetCollider();
+        if (collision != null)
+        {
+            collider = collision.GetCollider();
+        }
+
 
         if (collider is Brick)
         {
+            //EmitSignal(SignalName.CollidedWithBrick, collider);
             Collided((Brick)collider);
         }
 
