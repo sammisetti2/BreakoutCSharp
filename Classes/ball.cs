@@ -48,19 +48,20 @@ public partial class ball : CharacterBody2D
         if (collision != null)
         {
             collider = collision.GetCollider();
-        }
-
-
-        if (collider is Brick)
-        {
-            //EmitSignal(SignalName.CollidedWithBrick, collider);
-            Collided((Brick)collider);
-        }
-
-        if (collision != null)
-        {
-            GD.Print(speedMultiplier);
-            Velocity = Velocity.Bounce(collision.GetNormal()) * speedMultiplier;
+            if (collider is Brick)
+            {
+                var finalhp = Collided((Brick)collider);
+                // if (finalhp == 0)
+                // {
+                //     Velocity = Velocity.Bounce(collision.GetNormal()) * speedMultiplier;
+                // }
+            }
+            else
+            {
+                //Velocity = Velocity.Bounce(collision.GetNormal());
+            }
+            Velocity = Velocity.Bounce(collision.GetNormal());
+            GD.Print(Velocity);
         }
     }
 
@@ -76,9 +77,10 @@ public partial class ball : CharacterBody2D
         GD.Print(Velocity);
     }
 
-    public void Collided(Brick brick)
+    public int Collided(Brick brick)
     {
-        brick.TakeAHit();
+        var finalhp = brick.TakeAHit();
+        return finalhp;
     }
 
 }

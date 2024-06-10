@@ -16,7 +16,7 @@ public partial class Brick : StaticBody2D
 	{
 	}
 
-	public void TakeAHit()
+	public int TakeAHit()
 	{
 		--hp;
 		if (hp == 1)
@@ -27,5 +27,6 @@ public partial class Brick : StaticBody2D
 		{
 			QueueFree();
 		}
+		return hp;
 	}
 }
