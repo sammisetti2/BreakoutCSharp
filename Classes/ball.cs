@@ -51,16 +51,20 @@ public partial class ball : CharacterBody2D
             if (collider is Brick)
             {
                 var finalhp = Collided((Brick)collider);
-                // if (finalhp == 0)
-                // {
-                //     Velocity = Velocity.Bounce(collision.GetNormal()) * speedMultiplier;
-                // }
+                if (finalhp == 0)
+                {
+                    Velocity = Velocity.Bounce(collision.GetNormal()) * speedMultiplier;
+                }
+                else
+                {
+                    Velocity = Velocity.Bounce(collision.GetNormal());
+                }
             }
             else
             {
-                //Velocity = Velocity.Bounce(collision.GetNormal());
+                Velocity = Velocity.Bounce(collision.GetNormal());
             }
-            Velocity = Velocity.Bounce(collision.GetNormal());
+            //Velocity = Velocity.Bounce(collision.GetNormal());
             GD.Print(Velocity);
         }
     }

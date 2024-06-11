@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://yhfc0udob275" path="res://Assets/Breakout Tile Set Free/PNG/07-Breakout-Tiles.png" id="3_ml7a6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bsey"]
-size = Vector2(152.5, 52)
+size = Vector2(384, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qnj54"]
 animations = [{
@@ -30,7 +30,6 @@ animations = [{
 script = ExtResource("1_17s1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Brick"]]
-position = Vector2(-0.25, 0)
 shape = SubResource("RectangleShape2D_1bsey")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

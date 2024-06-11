@@ -4,7 +4,7 @@ using System;
 public partial class player : CharacterBody2D
 {
     [Export]
-    public int speed = 500;
+    public int speed = 800;
 
     //Emit this signal when player presses Start (Space Bar)
     [Signal]
