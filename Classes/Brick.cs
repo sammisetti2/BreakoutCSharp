@@ -25,6 +25,8 @@ public partial class Brick : StaticBody2D
 		}
 		else
 		{
+			var gameManager = GetNode<Node>("../../GameManager");
+			gameManager.Call("AddPoint");
 			QueueFree();
 		}
 		return hp;
