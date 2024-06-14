@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://wio44qthqv5t"]
+[gd_scene load_steps=10 format=3 uid="uid://wio44qthqv5t"]
 
 [ext_resource type="Script" path="res://Classes/GameManager.cs" id="1_5mjo3"]
 [ext_resource type="PackedScene" uid="uid://bhnncvaslon07" path="res://Scenes/wall.tscn" id="1_6jco7"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dmeef586pbfbo" path="res://Scenes/green_brick.tscn" id="5_thkdv"]
 [ext_resource type="PackedScene" uid="uid://y67h6lj8fkko" path="res://Scenes/orange_brick.tscn" id="6_x2usv"]
 [ext_resource type="PackedScene" uid="uid://c1goohbrwurpa" path="res://Scenes/red_brick.tscn" id="7_wm4pa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6w0k"]
+size = Vector2(1272, 20)
 
 [node name="Main" type="Node2D"]
 
@@ -21,6 +24,14 @@ offset_right = -736.0
 offset_bottom = -544.0
 theme_override_font_sizes/font_size = 50
 text = "Score: 00"
+
+[node name="Lives" type="Label" parent="GameManager"]
+offset_left = 696.0
+offset_top = -608.0
+offset_right = 1072.0
+offset_bottom = -536.0
+theme_override_font_sizes/font_size = 50
+text = "Lives: 03"
 
 [node name="Walls" type="Node" parent="."]
 
@@ -287,3 +298,12 @@ scale = Vector2(0.4, 0.4)
 [node name="Red Brick16" parent="Bricks" instance=ExtResource("7_wm4pa")]
 position = Vector2(-88, -504)
 scale = Vector2(0.4, 0.4)
+
+[node name="GameOverArea" type="Area2D" parent="."]
+position = Vector2(0, 576)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOverArea"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_m6w0k")
+
+[connection signal="body_entered" from="GameOverArea" to="GameManager" method="OnGameOverAreaBodyEntered"]

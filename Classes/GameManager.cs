@@ -15,6 +15,21 @@ public partial class GameManager : Node
 	{
 	}
 
+	private void OnGameOverAreaBodyEntered(Node2D body)
+	{
+		if (body is ball)
+		{
+			GD.Print("Ball went out of bounds");
+			CallDeferred("ResetLevel");
+		}
+
+	}
+
+	private void ResetLevel()
+	{
+		GetTree().ReloadCurrentScene();
+	}
+
 	public void AddPoint()
 	{
 		score += 1;

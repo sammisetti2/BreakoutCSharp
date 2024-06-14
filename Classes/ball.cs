@@ -18,11 +18,13 @@ public partial class ball : CharacterBody2D
     float ballSpeed = initialBallSpeed;
 
     CharacterBody2D player;
+    AudioStreamPlayer2D audio;
 
     public override void _Ready()
     {
         followPlayer = true;
         player = GetNode<CharacterBody2D>("../Player");
+        audio = GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D");
         base._Ready();
     }
 
@@ -47,6 +49,7 @@ public partial class ball : CharacterBody2D
 
         if (collision != null)
         {
+            audio.Play();
             collider = collision.GetCollider();
             if (collider is Brick)
             {
