@@ -6,7 +6,7 @@ public partial class ball : CharacterBody2D
     [Signal]
     public delegate void CollidedWithBrickEventHandler(Brick brick);
 
-    private bool followPlayer;
+    public bool followPlayer;
 
     [Export]
     static float initialBallSpeed = 20;

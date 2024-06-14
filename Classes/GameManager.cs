@@ -5,14 +5,13 @@ public partial class GameManager : Node
 {
 	int score = 0;
 
-	// Called when the node enters the scene tree for the first time.
+	CharacterBody2D player;
+	ball ball;
+
 	public override void _Ready()
 	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+		player = GetNode<CharacterBody2D>("../Player");
+		ball = GetNode<ball>("../Ball");
 	}
 
 	private void OnGameOverAreaBodyEntered(Node2D body)
@@ -20,9 +19,19 @@ public partial class GameManager : Node
 		if (body is ball)
 		{
 			GD.Print("Ball went out of bounds");
-			CallDeferred("ResetLevel");
+			CallDeferred("ResetPlayer");
 		}
 
+	}
+
+	private void ResetPlayer()
+	{
+		ball.followPlayer = true;
+		ball.GlobalPosition = new Vector2(0f, player.GlobalPosition.Y - 40);
+
+		ball.Velocity = Vector2.Zero;
+		player.Velocity = Vector2.Zero;
+		player.GlobalPosition = new Vector2(0f, player.GlobalPosition.Y);
 	}
 
 	private void ResetLevel()
