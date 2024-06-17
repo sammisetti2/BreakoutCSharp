@@ -15,23 +15,35 @@ size = Vector2(1272, 20)
 [node name="Main" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
+process_mode = 3
 script = ExtResource("1_5mjo3")
 
 [node name="Score" type="Label" parent="GameManager"]
-offset_left = -1112.0
-offset_top = -616.0
-offset_right = -736.0
-offset_bottom = -544.0
+offset_left = -1128.0
+offset_top = -520.0
+offset_right = -752.0
+offset_bottom = -448.0
 theme_override_font_sizes/font_size = 50
 text = "Score: 00"
 
 [node name="Lives" type="Label" parent="GameManager"]
-offset_left = 696.0
-offset_top = -608.0
-offset_right = 1072.0
-offset_bottom = -536.0
+offset_left = -1128.0
+offset_top = -616.0
+offset_right = -752.0
+offset_bottom = -544.0
 theme_override_font_sizes/font_size = 50
 text = "Lives: 03"
+
+[node name="GameOver" type="Label" parent="GameManager"]
+offset_left = -328.0
+offset_right = 328.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 50
+text = "Game Over
+
+Press \"Enter\" to start over"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Walls" type="Node" parent="."]
 

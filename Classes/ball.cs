@@ -39,7 +39,7 @@ public partial class ball : CharacterBody2D
             GlobalPosition = position;
         }
 
-        if (Input.IsActionPressed("start_game") && followPlayer)
+        if (Input.IsActionJustPressed("start_game") && followPlayer)
         {
             StartBall();
         }
